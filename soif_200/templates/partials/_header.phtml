@@ -1,0 +1,13 @@
+<header>
+    <nav>
+        <div class="nav-logo">
+            <img src="assets/images/<?= $data["logo"] ?>" alt="<?= $data["name"] ?>" />
+            <span><?= $data["name"] ?></span>
+        </div>
+        <ul>
+            <?php foreach($data["links"] as $link): ?>
+            <li><a href="#"><?= $link ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+</header>

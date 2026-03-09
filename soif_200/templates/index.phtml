@@ -1,0 +1,56 @@
+<main>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <img src="assets/images/<?= $data["logo"] ?>" alt="<?= $data["name"] ?>" class="hero-logo" />
+            <h1><?= $data["name"] ?></h1>
+            <p><?= $data["tagline"] ?></p>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services" id="services">
+        <h2>Nos Services</h2>
+        <div class="services-grid">
+            <?php foreach($data["services"] as $service): ?>
+            <div class="service-card">
+                <img src="assets/images/<?= $service["image"] ?? $service["images"] ?>" alt="<?= $service["name"] ?>" />
+                <h3><?= $service["name"] ?></h3>
+                <p class="service-tagline"><?= $service["tagline"] ?></p>
+                <p class="service-description"><?= $service["description"] ?></p>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- TARIFS -->
+    <section class="prices" id="tarifs">
+        <h2>Nos Tarifs</h2>
+        <div class="prices-grid">
+            <?php foreach($data["prices"] as $price): ?>
+            <div class="price-card">
+                <h3><?= $price["name"] ?></h3>
+                <p class="price-amount"><?= $price["price"] ?> €</p>
+                <p class="price-duration"><?= $price["duration"] ?></p>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </section>
+
+    <!-- LOGO SEPARATEUR -->
+    <div class="contact-logo">
+        <img src="assets/images/<?= $data["logo"] ?>" alt="<?= $data["name"] ?>" />
+    </div>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contacts">
+        <h2>Nous Contacter</h2>
+        <div class="social-links">
+            <a href="#"><img src="assets/images/facebook.svg" alt="Facebook" /></a>
+            <a href="#"><img src="assets/images/twitter.svg" alt="Twitter" /></a>
+            <a href="#"><img src="assets/images/instagram.svg" alt="Instagram" /></a>
+            <a href="#"><img src="assets/images/tik-tok.svg" alt="TikTok" /></a>
+            <a href="#"><img src="assets/images/youtube.svg" alt="YouTube" /></a>
+        </div>
+    </section>
+</main>

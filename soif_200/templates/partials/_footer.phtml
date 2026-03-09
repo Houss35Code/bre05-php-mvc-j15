@@ -1,0 +1,13 @@
+<footer>
+    <div class="footer-logo">
+        <img src="assets/images/<?= $data["logo"] ?>" alt="<?= $data["name"] ?>" />
+        <p class="copyright">Copyright - Les dieux du code</p>
+    </div>
+    <nav class="footer-nav">
+        <ul>
+            <?php foreach($data["links"] as $link): ?>
+            <li><a href="#"><?= $link ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+</footer>
